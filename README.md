@@ -7,7 +7,7 @@ This project is a Node.js application built with Express.js and TypeScript. It i
 - **Node.js** - Runtime environment
 - **TypeScript** - Programming language
 - **Express.js** - Server framework
-- **MySQL2** - Database
+- **MySQL & MySQL2** - Database
 - **EJS** - Template engine
 - **Express Session** - Session management
 - **Express MySQL Session** - Session store
