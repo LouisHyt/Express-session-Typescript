@@ -18,7 +18,8 @@ const MySQLStore = expressMySQL(session as any);
 const expirationTime = 1 * 60 * 60 * 1000; //1 Heure
 const storeOptions = {
     clearExpired: true,
-    expiration: expirationTime
+    expiration: expirationTime,
+    createDatabaseTable: true
 }
 
 
