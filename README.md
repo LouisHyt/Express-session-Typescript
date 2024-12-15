@@ -85,7 +85,7 @@ The application implements several security measures:
 - Environment variables and validation for sensitive data
 
 ## 🔧 Configuration
-The project uses module-alias for better import management. Aliases are defined in package.json and include:
+The project uses module-alias for better import management. Aliases are defined in package.json / tsconfig.json and include:
 - @root
 - @models
 - @utils
