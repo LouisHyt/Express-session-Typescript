@@ -1,28 +1,35 @@
 # Express Session Application
 
 ## 📝 Description
-This is a Node.js application built with Express.js and TypeScript, implementing a user authentication system with session management using MySQL as the database.
+This project is a Node.js application built with Express.js and TypeScript. It implements a user authentication system with session management using MySQL as the database.
 
 ## 🛠 Technologies Used
 - **Node.js** - Runtime environment
 - **TypeScript** - Programming language
-- **Express.js** - Web framework
-- **MySQL** - Database
+- **Express.js** - Server framework
+- **MySQL2** - Database
 - **EJS** - Template engine
 - **Express Session** - Session management
+- **Express MySQL Session** - Session store
+- **Passport** - Authentication middleware
+- **Connect Flash** - Flash messages with EJS
+- **Zod** - Validation Schemas
+- **He** - HTML entity encoder/decoder 
 - **Helmet** - Security middleware
+- **Module Alias** - Import management
 - **dotenv** - Environment variables management
+- **nodemon** - Hot reloading module
 
 ## 📋 Prerequisites
-- Node.js (version 14 or higher)
-- MySQL
+- Node.js
+- MySQL database
 - npm or yarn
 
 ## 🚀 Installation
 
 1. Clone the repository:
 ```bash
-git clone [your-repo]
+git clone https://github.com/LouisHyt/Express-session-Typescript
 cd express-session
 ```
 
@@ -35,12 +42,16 @@ npm install
 - Create a `.env` file in the root directory
 - Add the following variables:
 ```env
+PORT=server_port
+SESSION_SECRET=secret_to_sign_session_cookie
 DB_HOST=localhost
-DB_USER=your_username
-DB_PASSWORD=your_password
-DB_DATABASE=your_database
-SESSION_SECRET=your_secret
+DB_PORT=database_port
+DB_USER=database_username
+DB_PASSWORD=database_password
+DB_NAME=database_name
+NODE_ENV=development
 ```
+⚠️ *If you wish to add more environment variables, don't forget to edit the env.ts file to validate them with Zod.*
 
 4. Start the application in development mode:
 ```bash
@@ -49,13 +60,17 @@ npm run dev
 
 ## 🏗 Project Structure
 ```
-src/
-├── controllers/    # Application controllers
-├── models/        # Data models
-├── routes/        # Application routes
-├── views/         # EJS templates
-├── public/        # Static files
-└── server.ts      # Application entry point
+├── types/             # Custom typescript declarations
+├── src/
+│   ├── config/        # Global configuration         
+│   ├── controllers/   # Application controllers
+│   ├── models/        # Data models
+│   ├── public/        # Static files
+│   ├── routes/        # Application routes
+│   ├── utils/         # Utils functions
+│   ├── views/         # EJS templates
+│   └── server.ts      # Application entry point
+└── env.ts 
 ```
 
 ## 📦 Available Scripts
@@ -65,9 +80,9 @@ src/
 ## 🔒 Security Features
 The application implements several security measures:
 - Helmet for HTTP headers security
-- Secure sessions with express-session
+- Secure sessions with express-session & signed cookies
 - MySQL session storage
-- Environment variables for sensitive data
+- Environment variables and validation for sensitive data
 
 ## 🔧 Configuration
 The project uses module-alias for better import management. Aliases are defined in package.json and include:
@@ -81,5 +96,7 @@ The project uses module-alias for better import management. Aliases are defined 
 ## 🤝 Contributing
 Feel free to submit issues and enhancement requests.
 
-## 📄 License
-This project is licensed under the ISC License.
+## 📄 Infos
+This project was made on my free time to learn more about Typescript, Express and session management/security.
+- 📅 Date : december 2024
+- ✍️ Author : Louis Hayotte
