@@ -1,0 +1,20 @@
+{
+    "compilerOptions": {
+      "module": "NodeNext",
+      "strict": true,
+      "moduleResolution": "NodeNext",
+      "target": "ES2023",
+      "sourceMap": true,
+      "outDir": "dist",
+      "paths": {
+          "@root/*": ["./*"],
+          "@models/*": ["./src/models/*"],
+          "@utils/*": ["./src/utils/*"],
+          "@config/*": ["./src/config/*"],
+          "@controllers/*": ["./src/controllers/*"],
+          "@routes/*": ["./src/routes/*"]
+      },
+      "typeRoots": ["types"]
+    },
+    "include": ["src/**/*", "env.ts"],
+}

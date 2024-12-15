@@ -1,0 +1,19 @@
+<% 
+const flashes = Object.entries(locals.flashMessages).flatMap(([key, values]) =>
+    values.map(value => ({ 
+        type : key,
+        message: value 
+    }))
+);
+%>
+
+<% if(flashes.length) { %> 
+    <div class="flash-container"> 
+    <% for(const flash of flashes) { %>
+        <div class="flash <%= flash.type %>">
+            <p><%= flash.message %></p>
+        </div>
+    <% } %>
+    </div>
+<% } %>
+    
