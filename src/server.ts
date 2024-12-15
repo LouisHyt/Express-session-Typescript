@@ -13,7 +13,7 @@ import authRoute from './routes/authRoute'
 import localStrategy from './config/strategies/local-strategy';
 
 
-// Problèmes de types session & database. En important avec as any le problème disparait mais en utilisant ES6 le probleme reste
+// Problèmes de types session & database. En important avec as any ou avec require le problème disparait mais en utilisant les import ES6 le probleme reste
 const MySQLStore = expressMySQL(session as any);
 const expirationTime = 1 * 60 * 60 * 1000; //1 Heure
 const storeOptions = {
