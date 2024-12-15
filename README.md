@@ -93,9 +93,6 @@ The project uses module-alias for better import management. Aliases are defined 
 - @controllers
 - @routes
 
-## 🤝 Contributing
-Feel free to submit issues and enhancement requests.
-
 ## 📄 Infos
 This project was made on my free time to learn more about Typescript, Express and session management/security.
 - 📅 Date : december 2024
